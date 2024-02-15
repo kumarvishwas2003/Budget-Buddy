@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./CSS/dashboard.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .icon-details{
+            display: flex;
+            gap:10px;
+        }
+        .dashboard-container{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+  backdrop-filter: blur(1px);
+        }
+    /* .expense{
+    height:20px;
+    width:20px;
+    padding:10px;
+    } */
+    /* background-image: url("./icons/wallet.png"); 
+    /* background-repeat: no-repeat;
+    background-size: contain;
+    background-color: red;
+    background-position: center;
+  } */
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- <div>
+            <img src="./images/logo.png" class="bg-logo">
+        </div> -->
+        <div class="log-out-div mb-4 mt-2">
+            <a href="logout.php"><input type="submit" value="Logout" class="log-out-btn"></a>
+        </div>
+        <div class="contents-div">
+            <div class="icon-details flex-col text-xl text-center px-2 ">
+                <div class="glass calender-row border">
+                    <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="details">Calender</div>
+                </div>
+
+                <div class="glass income-row">
+                    <div class="icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                    <div class="details">Income</div>
+                </div>
+
+                <div class="glass expense-row">
+                    <div class="icon"><i class="fa-solid fa-wallet"></i></div>
+                    <div class="details">Expense</div>
+                </div>
+
+                <div class="glass report-row">
+                    <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="details">Report</div>
+                </div>
+            </div><!--icon details-->
+            <div class="continue text-center text-xl mt-3">
+                <h2>Click to continue</h2>
+            </div>
+            <div class="input-div">
+                <div class="row1">
+                    <input type="submit" class="expense" name="expense" value="">
+                    <input type="submit" class="expense" name="expense" value="">
+                </div>
+                <div class="row2">
+                   <input type="submit" class="expense" name="expense" value="">
+                   <input type="submit" class="expense" name="expense" value="">
+                </div>
+            </div>
+        </div><!--contents-div-->
+        <div class="next-btn-div"><input type="button" value="Back" class="next-btn"></a></div>
+        <!-- <input type="text" placeholder="helllo">
+        <input type="button" value="click">
+        <input type="submit" value="hello"> -->
+    </div><!--dashboard-->
+</body>
+</html>
