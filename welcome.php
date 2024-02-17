@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 session_start();
+// if()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,9 +68,10 @@ session_start();
                 The Budget Buddy Team"
             </p>
         </div>
-        <div class="next-btn-div"><input type="button" value="Next" class="next-btn"></a></div>
+        <div class="next-btn-div"><a href="dashboard.html"><button class="next-btn" value="Next">Next</button></a></div>
     </div>
     <!--welcome-container-->
+    <!-- <input type="button" value="Next" class="next-btn"> -->
 
 
 </body>

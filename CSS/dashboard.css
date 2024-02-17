@@ -72,11 +72,5 @@
 .income-row{
   background-color: rgba(255, 255, 0, 0.2);
 } */
-.expense{
-  /* background-image: url("./icons/wallet.png");  */
-     background-repeat: no-repeat;
-    background-size: contain;
-    background-color: red;
-    background-position: center;
-}
+
 
