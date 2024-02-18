@@ -1,76 +1,24 @@
-  *{
-    overflow-y: hidden;
-  }
-  .bg-logo {
-    height: 220px;
-    width: 220px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -2;
-    opacity: 0.2;
-    animation: float 5s ease-in-out infinite; /* Adjust timing and animation properties as needed */
-  }
-  @keyframes float {
-    0% {
-      transform: translate(-50%, -50%);
-    }
-    50% {
-      transform: translate(-50%, -45%);
-    }
-    100% {
-      transform: translate(-50%, -50%);
-    }
-  }
-  .log-out-div{
-    align-self: end;
-    margin-right: 20px;
-    margin-bottom: 10px;
-  }
-  .log-out-btn{ 
-    margin-top: 5px;
-    background-color: #138808e1;
-    font-size: 17px;
-    color: white;
-    font-weight: 700;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border:1px solid green;
-  
-  } 
-  .log-out-btn:hover{
-    color:white;
-    background-color:#138808e1;
-  }
-  .next-btn-div{
-    margin-top: 70px;
-    align-self: end;
-    margin-right: 20px;
-  }
-  .next-btn{
-     background-color: white;
-    font-size: 17px;
-    color: #138808e1;
-    font-weight: 700;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border:1px solid white;
-  }
-
-.glass{
-  position: relative;
+.answer {
+  background-color: rgba(255, 255, 255, 0.336);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  text-align: left;
+  padding: 0 10px;
+  max-height: 0;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.336); /* Adjust opacity for glass effect */
-  border-radius: 10px; /* Rounded corners */
-  color: rgb(66, 66, 66);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.628);
+  border-radius: 10px;
+  /* padding: 1px; */
 }
-/* .calender-row{
-  background-color: rgba(255, 0, 0, 0.1);
+.accordian {
+  cursor: pointer;
 }
-.income-row{
-  background-color: rgba(255, 255, 0, 0.2);
-} */
-
-
+.answer.active {
+  max-height: fit-content;
+}
+.icon-right {
+  margin-right: 15px;
+  transition: transform 0.2s;
+}
+.icon-right.active {
+  transform: rotate(-180deg);
+}
