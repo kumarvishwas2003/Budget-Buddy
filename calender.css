@@ -1,0 +1,32 @@
+.month {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 5;
+  height: 120px;
+  /* border-radius: 20px; */
+}
+.month-text {
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.336);
+  font-size: 40px;
+  font-weight: bold;
+}
+.expense {
+  /* height: 10%; */
+  background-color: rgba(220, 117, 117, 0.336);
+  border: 1px solid white;
+}
+.income {
+  /* height: 10%; */
+  background-color: rgba(128, 232, 118, 0.336);
+  border: 1px solid white;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+}

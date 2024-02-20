@@ -1,0 +1,33 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #ff9933, #ffffff, #138808);
+  backdrop-filter: blur(1px);
+}
+
+.bg-logo {
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  opacity: 0.2;
+  animation: float 5s ease-in-out infinite;
+  /* Adjust timing and animation properties as needed */
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -45%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
