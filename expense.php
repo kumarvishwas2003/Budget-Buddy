@@ -1,6 +1,8 @@
 <?php
 include 'connection.php';
 session_start();
+
+
 if(isset($_POST['date_ok'])) {
     $date_main = $_POST['date_main'];
     $_SESSION['date_main'] = $date_main;

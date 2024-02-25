@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 session_start();
+$user_entry = $_SESSION['username'];
 $date_current = $_SESSION['date_main'];
 // echo $date_current;
 
@@ -13,7 +14,7 @@ $date_formatted = date("Y-m-d", strtotime($date_current));
 if(isset($_POST['data_enter'])) {
   $item = $_POST['item'];
   $cost = $_POST['cost'];
-  $ins = "INSERT INTO `expense` (`sno`, `item`, `cost`, `date`) VALUES (NULL, '$item', '$cost', '$date_current')";
+  $ins = "INSERT INTO `expense` (`sno`,`user`, `item`, `cost`, `date`) VALUES (NULL,'$user_entry','$item', '$cost', '$date_current')";
   if(mysqli_query($conn, $ins)) {
     // Redirect the user to a different page after successful form submission
     header("Location: expense_main.php");
@@ -22,6 +23,28 @@ if(isset($_POST['data_enter'])) {
     echo "Error: " . mysqli_error($conn);
   }
 }
+
+
+$sql_sum = "SELECT SUM(cost) AS total_sum FROM expense WHERE date = '$date_formatted' && user='$user_entry'";
+// Execute the query
+$result = mysqli_query($conn, $sql_sum);
+
+// Check if the query executed successfully
+if ($result) {
+    // Fetch the result
+    $row = mysqli_fetch_assoc($result);
+    
+    // Total sum of the column
+    $total_sum = $row['total_sum'];
+    
+    // Output the total sum
+    // echo "Total Sum: " . $total_sum;
+} else {
+    // If the query fails, handle the error
+    echo "Error: " . mysqli_error($conn);
+}
+
+
 
 ?>
 
@@ -60,10 +83,14 @@ if(isset($_POST['data_enter'])) {
           Back
         </button></a
       >
-
-      <span class="expense-head-div self-center text-2xl font-bold">
-        <?php echo $date_current  ?>
+      <div class="middle flex flex-col">
+      <span class="expense-head-div self-center text-xl font-bold">
+        <?php echo $date_current  ?> <br>
       </span>
+      <span class="self-center text-sm font-bold">
+        <?php echo "Total Sum: " . $total_sum; ?>
+      </span> 
+      </div>      
 
       <a href="logout.php">
         <input
@@ -110,7 +137,7 @@ if(isset($_POST['data_enter'])) {
 
 
 //display
-$sql = "SELECT * FROM expense WHERE date = '$date_formatted'";
+$sql = "SELECT * FROM expense WHERE date = '$date_formatted' && user='$user_entry'";
 $result = $conn -> query($sql);
 ?>
 <table id="myTable" class="display">
