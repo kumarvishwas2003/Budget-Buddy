@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href=".\CSS\login.css" />
 </head>
 
 
@@ -50,10 +50,11 @@ if (isset($_POST['login'])) {
             <input type="password" placeholder="Password" name="password" required />
 
             <?php if (isset($failed)) { ?>
-                <div class="error"><?php echo $failed; ?></div>
+            <div class="error"><?php echo $failed; ?></div>
             <?php } ?>
             <input type="submit" value="Login" class="login-bt" name="login" />
         </form>
+        <p class="register">New Here? <a href="register.html" class="link-register">Register</a> </p>
     </div>
     <!--log-container-->
 </body>
