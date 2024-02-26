@@ -1,3 +1,11 @@
+<?php
+include 'connection.php';
+session_start();
+$user_calender = $_SESSION['username'];
+$sql_sum_month = "SELECT SUM(cost) AS total_sum FROM expense WHERE date = '$date_formatted' && user='$user_entry'";
+// Execute the query
+$result = mysqli_query($conn, $sql_sum);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +48,7 @@
       >
         <div class="month jan">
           <div class="month-text">Jan</div>
-          <div class="expense">400</div>
+          <div class="expense"></div>
           <div class="income">5000</div>
         </div>
 

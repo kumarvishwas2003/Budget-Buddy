@@ -205,7 +205,7 @@ include 'connection.php';
                 <h2>Click to continue</h2>
             </div>
             <div class="input-div grid grid-cols-2 text-6xl gap-y-5 text-center">
-                <a href="calender.html"><button class="calender act">
+                <a href="calender.php"><button class="calender act">
                         <i class="fa-solid fa-calendar-days"></i></button></a>
                 <a href="income.html"><button class="income act">
                         <i class="fa-solid fa-indian-rupee-sign"></i></button></a>
