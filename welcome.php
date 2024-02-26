@@ -93,9 +93,9 @@ session_start();
 
 <body>
     <?php
-    // $user_profile = $_SESSION['username'];
-    $user_register = $_SESSION['fname'];
-    if ($user_register) {
+    $user_profile = $_SESSION['username'];
+    // $user_register = $_SESSION['fname'];
+    if ($user_profile) {
     } else {
         header('location:login.php');
     }
@@ -129,7 +129,7 @@ session_start();
 </div>
         </div>
         <div class="welcome-head mt-10">
-            <h1 class="text-center font-bold text-3xl mt-3">Welcome <?php echo $user_register ?></h1>
+            <h1 class="text-center font-bold text-3xl mt-3">Welcome <?php echo $user_profile ?></h1>
     </div>
     <div class="content-head">
         <p class="text-center text-md mt-2 font-semibold">Happy Budgeting! </p>
