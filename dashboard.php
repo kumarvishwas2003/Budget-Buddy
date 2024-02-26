@@ -6,7 +6,7 @@ include 'connection.php';
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="./CSS/dashboard.css" />
@@ -71,6 +71,7 @@ include 'connection.php';
             transform: translate(-50%, -50%);
         }
     }
+    /*this is the proof that merge is working
 
     /* .log-out-btn {
         background-color: #138808;
