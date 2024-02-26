@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
             <?php } ?>
             <input type="submit" value="Login" class="login-bt" name="login" />
         </form>
-        <p class="register">New Here? <a href="register.html" class="link-register">Register</a> </p>
+        <p class="register">New Here? <a href="register.php" class="link-register">Register</a> </p>
     </div>
     <!--log-container-->
 </body>

@@ -73,3 +73,10 @@ body {
   font-weight: bold;
   color: white;
 }
+.error {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  color: red;
+  /* background-color: blue; */
+}

@@ -82,7 +82,7 @@ include 'connection.php';
 <body>
     <?php
         $user_dashboard = $_SESSION['username']; 
-        if($user_dashboard){
+        if($user_dashboard || ){
 
         }
         else{
