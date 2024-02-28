@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/float.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./CSS/about.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="about-container">
+      <div>
+        <img src="./images/logo.png" class="bg-logo" />
+      </div>
+
+      <div class="nav flex justify-between mx-2 mb-4">
+        <a href="dashboard.php">
+          <button
+            class="back-btn border-2 p-2 rounded-2xl text-xl font-semibold mt-2 bg-orange-400 text-white"
+          >
+            Back
+          </button></a
+        >
+
+        <span class="cal-head-div self-center text-2xl font-bold">
+          About Us!
+        </span>
+
+        <a href="logout.php">
+          <input
+            type="submit"
+            value="Logout"
+            class="log-out-btn border-2 p-2 rounded-2xl text-xl font-semibold mt-2 bg-[#138808] text-white"
+        /></a>
+      </div>
+      <div class="accordian">
+        <!--accordian-->
+        <div class="question flex justify-between mx-3">
+          <div class="left flex gap-2">
+            <div class="icon-div-left">
+              <i class="fa-solid fa-info"></i>
+            </div>
+            <div class="text-data">About Us</div>
+          </div>
+          <div class="right">
+            <div class="icon-div-right">
+              <i class="fa-solid fa-caret-down icon-right"></i>
+            </div>
+          </div>
+        </div>
+        <!--question-->
+        <div class="answer">
+          <div class="mb-6 mt-5">
+            <p>
+              Hello and welcome to our project, created by
+              <strong>Vishwas</strong> and his team of talented friends:
+              <strong>Vinayak</strong>, <strong>Vishal</strong>,
+              <strong>Varun</strong>, and <strong>Veeresh</strong>. We're a
+              group of passionate computer science engineering students,
+              dedicated to bringing innovative solutions to life.
+            </p>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Our Story</h2>
+            <p class="mb-2">
+              As college students, we often found ourselves struggling to manage
+              our finances effectively. That's when the idea for this project
+              was born. Determined to tackle this challenge head-on, we combined
+              our skills in HTML, CSS, JavaScript, PHP, and MySQL to create a
+              user-friendly platform for tracking expenses and budgeting.
+            </p>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Our Mission</h2>
+            <p class="mb-2">
+              Our mission is simple: to empower individuals to take control of
+              their finances. We believe that everyone deserves access to tools
+              that make financial management easy and accessible. With our
+              project, we aim to provide a solution that simplifies the process
+              of tracking expenses, setting budgets, and achieving financial
+              goals.
+            </p>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Our Vision</h2>
+            <p class="mb-2">
+              Looking ahead, we envision our project becoming a go-to resource
+              for students and professionals alike, helping them navigate the
+              complexities of personal finance with confidence. We're committed
+              to continually improving and expanding our platform to meet the
+              evolving needs of our users.
+            </p>
+          </div>
+
+          <div class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Join Us</h2>
+            <p class="mb-2">
+              We invite you to join us on this journey towards financial
+              empowerment. Whether you're a student managing a tight budget or a
+              working professional striving for financial freedom, our project
+              is here to support you every step of the way.
+            </p>
+          </div>
+
+          <p>
+            Thank you for choosing our project. Together, let's build a brighter
+            financial future!
+          </p>
+        </div>
+      </div>
+      <div class="container-form p-4">
+        <p class="font-bold text-2xl mt-5 underline underline-offset-1">
+          Contact Us!
+        </p>
+        <form id="contactForm" class="mb-6">
+          <div class="mb-4 mt-3">
+            <label for="name" class="block text-gray-700 font-bold mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-input rounded-md shadow-sm w-full p-1"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-bold mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input rounded-md shadow-sm w-full p-1"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-bold mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="form-textarea rounded-md shadow-sm w-full"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="about.js"></script>
+    <script>
+      // JavaScript to handle form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Retrieve form data
+          const formData = new FormData(this);
+          const name = formData.get("name");
+          const email = formData.get("email");
+          const message = formData.get("message");
+
+          // Create email link with pre-filled content
+          const subject = encodeURIComponent("Contact Us Inquiry");
+          const body = encodeURIComponent(
+            `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`
+          );
+          const mailtoLink = `mailto:vishwas452003@gmail.com?subject=${subject}&body=${body}`;
+
+          // Open default email client with pre-filled content
+          window.location.href = mailtoLink;
+        });
+    </script>
+  </body>
+</html>

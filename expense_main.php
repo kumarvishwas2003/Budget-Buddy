@@ -65,6 +65,16 @@ if ($result) {
         background-color: rgba(255, 255, 255, 0.491);
 
       }
+      .update{
+        color: green;
+        font-weight: bold;
+      }
+      .delete{
+        color:red;
+        font-weight: bold;
+
+      }
+
     </style>
     <!--bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -98,6 +108,7 @@ if ($result) {
           value="Logout"
           class="log-out-btn border-2 p-2 rounded-2xl text-xl font-semibold mt-2 bg-[#138808] text-white"
       /></a>
+    </div>
       <!--form-->
       <div class="container mt-3">
       <form action="" method="POST">
@@ -146,6 +157,7 @@ $result = $conn -> query($sql);
       <th scope="col">S no.</th>
       <th scope="col">Item</th>
       <th scope="col">Cost</th>
+      <th scope="col">Action</th>
       <!-- <th scope="col">Edit</th> -->
     </tr>
   </thead>
@@ -162,6 +174,10 @@ if($result -> num_rows > 0){
       <td scope='col'>" .$sno . "</td>
       <td scope='col'>" . $row['item'] . "</td>
       <td scope='col'>" . $row['cost'] . "</td>
+      <td scope='col'>
+      <a href='update.php' class='update'>Update</a>
+      <button type='submit' name='delete' class='delete'>Delete</button>
+      </td>
     </tr>
     
 

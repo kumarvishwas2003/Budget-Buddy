@@ -132,28 +132,7 @@ include 'connection.php';
                     </div>
                 </div>
                 <!--income-->
-                <div class="accordian">
-                    <!--accordian-->
-                    <div class="question flex justify-between">
-                        <div class="left flex gap-2">
-                            <div class="icon-div-left">
-                                <i class="fa-solid fa-indian-rupee-sign"></i>
-                            </div>
-                            <div class="text-data">Income</div>
-                        </div>
-                        <div class="right">
-                            <div class="icon-div-right">
-                                <i class="fa-solid fa-caret-down icon-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!--question-->
-                    <div class="answer">
-                        Record your sources of income. Keep track of money coming in to
-                        effectively manage your finances and understand your overall
-                        financial health.
-                    </div>
-                </div>
+                
                 <!--expense-->
                 <div class="accordian">
                     <!--accordian-->
@@ -200,6 +179,26 @@ include 'connection.php';
                         make strategic adjustments to your budget and spending habits.
                     </div>
                 </div>
+                <div class="accordian">
+                    <!--accordian-->
+                    <div class="question flex justify-between">
+                        <div class="left flex gap-2">
+                            <div class="icon-div-left">
+                                <i class="fa-solid fa-info"></i>
+                            </div>
+                            <div class="text-data">About Us!</div>
+                        </div>
+                        <div class="right">
+                            <div class="icon-div-right">
+                                <i class="fa-solid fa-caret-down icon-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--question-->
+                    <div class="answer">
+                        Welcome to Budget Buddy! We're here to help you manage your finances effectively. Our platform offers tools for tracking expenses, analyzing spending habits, and making informed financial decisions. Join us and take control of your finances today!
+                    </div>
+                </div>
             </div>
             <!--icon details-->
             <div class="continue text-center text-xl mt-3 mb-5">
@@ -208,8 +207,8 @@ include 'connection.php';
             <div class="input-div grid grid-cols-2 text-6xl gap-y-5 text-center">
                 <a href="calender.php"><button class="calender act">
                         <i class="fa-solid fa-calendar-days"></i></button></a>
-                <a href="income.html"><button class="income act">
-                        <i class="fa-solid fa-indian-rupee-sign"></i></button></a>
+                <a href="about.html"><button class="about act">
+                        <i class="fa-solid fa-info"></i></button></a>
 
                 <a href="expense.php"><button class="expense act">
                         <i class="fa-solid fa-wallet"></i></button></a>

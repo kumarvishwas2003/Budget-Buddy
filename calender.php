@@ -2,9 +2,32 @@
 include 'connection.php';
 session_start();
 $user_calender = $_SESSION['username'];
-$sql_sum_month = "SELECT SUM(cost) AS total_sum FROM expense WHERE date = '$date_formatted' && user='$user_entry'";
-// Execute the query
-$result = mysqli_query($conn, $sql_sum);
+function getMonth($conn,$month,$user_calender){
+  $sql = "SELECT SUM(cost) as total_sum from expense where MONTH(date) = $month and user = '$user_calender'";
+  $result = mysqli_query($conn,$sql);
+  if($result){
+    $row = mysqli_fetch_assoc($result);
+    $total_sum = $row['total_sum'];
+    return $total_sum;
+  }
+  else{
+    echo "something got wrong";
+  }
+}
+
+$jan = getMonth($conn,1,$user_calender);
+$feb = getMonth($conn,2,$user_calender);
+$mar = getMonth($conn,3,$user_calender);
+$apr = getMonth($conn,4,$user_calender);
+$may = getMonth($conn,5,$user_calender);
+$jun = getMonth($conn,6,$user_calender);
+$jul = getMonth($conn,7,$user_calender);
+$aug = getMonth($conn,8,$user_calender);
+$sep = getMonth($conn,9,$user_calender);
+$oct = getMonth($conn,10,$user_calender);
+$nov = getMonth($conn,11,$user_calender);
+$dec = getMonth($conn,12,$user_calender);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,26 +71,62 @@ $result = mysqli_query($conn, $sql_sum);
       >
         <div class="month jan">
           <div class="month-text">Jan</div>
-          <div class="expense"></div>
-          <div class="income">5000</div>
+          <div class="expense"><?php echo $jan ?></div>
         </div>
 
         <div class="month feb">
           <div class="month-text">Feb</div>
-          <div class="expense">400</div>
-          <div class="income">5000</div>
+          <div class="expense"><?php echo $feb ?></div>
         </div>
 
         <div class="month mar">
           <div class="month-text">Mar</div>
-          <div class="expense">400</div>
-          <div class="income">5000</div>
+          <div class="expense"><?php echo $mar ?></div>
+        </div>
+
+        <div class="month apr">
+          <div class="month-text">Apr</div>
+          <div class="expense"><?php echo $apr ?></div>
+        </div>
+
+        <div class="month may">
+          <div class="month-text">May</div>
+          <div class="expense"><?php echo $may ?></div>
         </div>
 
         <div class="month mar">
-          <div class="month-text">Apr</div>
-          <div class="expense">400</div>
-          <div class="income">5000</div>
+          <div class="month-text">Jun</div>
+          <div class="expense"><?php echo $jun ?></div>
+        </div>
+
+        <div class="month mar">
+          <div class="month-text">JUL</div>
+          <div class="expense"><?php echo $jul ?></div>
+        </div>
+
+        <div class="month mar">
+          <div class="month-text">Aug</div>
+          <div class="expense"><?php echo $aug ?></div>
+        </div>
+
+        <div class="month mar">
+          <div class="month-text">Sept</div>
+          <div class="expense"><?php echo $sep ?></div>
+        </div>
+
+        <div class="month mar">
+          <div class="month-text">Oct</div>
+          <div class="expense"><?php echo $oct ?></div>
+        </div>
+
+        <div class="month mar">
+          <div class="month-text">Nov</div>
+          <div class="expense"><?php echo $nov ?></div>
+        </div>
+
+        <div class="month mar">
+          <div class="month-text">Dec</div>
+          <div class="expense"><?php echo $dec ?></div>
         </div>
       </div>
       <!--dates-->
@@ -75,3 +134,32 @@ $result = mysqli_query($conn, $sql_sum);
     <!--calender-container-->
   </body>
 </html>
+<!-- function getTotalExpenseForMonth($conn, $user_calender, $month) {
+    // Construct the SQL query to fetch the total sum of expenses for the specified month
+    $sql = "SELECT SUM(cost) AS total_sum 
+            FROM expense 
+            WHERE MONTH(date) = $month AND user = '$user_calender'";
+    
+    // Execute the query
+    $result = mysqli_query($conn, $sql);
+    
+    if ($result) {
+        // Fetch the result
+        $row = mysqli_fetch_assoc($result);
+        
+        // Total sum of the column
+        $total_sum = $row['total_sum'];
+        
+        // Return the total sum
+        return $total_sum;
+    } else {
+        // If the query fails, handle the error
+        echo "Error: " . mysqli_error($conn);
+        return false;
+    }
+} -->
+
+<!-- $january_total = getTotalExpenseForMonth($conn, $user_calender, 1); // January
+$february_total = getTotalExpenseForMonth($conn, $user_calender, 2);// February
+$march_total = getTotalExpenseForMonth($conn, $user_calender, 3); //march
+$april_total = getTotalExpenseForMonth($conn, $user_calender, 4); //april -->

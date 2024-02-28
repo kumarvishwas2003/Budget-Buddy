@@ -30,7 +30,7 @@ if(isset($_POST['register'])){
                 $sql_login = "INSERT INTO login(username, password) VALUES ('$username', '$password')";
                 if(mysqli_query($conn, $sql_login)) {
                     echo "User registered successfully.";
-                    header( "refresh:0.1;url=login.php" );
+                    header( "refresh:1;url=login.php" );
                     exit();
                 } else {
                     echo "Error inserting data into login table: " . mysqli_error($conn);
