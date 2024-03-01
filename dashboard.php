@@ -221,7 +221,7 @@ include 'connection.php';
 
                 <a href="expense.php"><button class="expense act">
                         <i class="fa-solid fa-wallet"></i></button></a>
-                <a href="report.html"><button class="report act">
+                <a href="report.php"><button class="report act">
                         <i class="fa-solid fa-chart-line"></i></button></a>
             </div>
         </div>

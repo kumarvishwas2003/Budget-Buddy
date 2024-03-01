@@ -132,20 +132,7 @@ if ($result) {
 
 
     <div class="container">
-        <?php
-//insertion
-// if(isset($_POST['data_enter'])){
-//   $item = $_POST['item'];
-//   $cost = $_POST['cost'];
-//   $ins = "INSERT INTO `expense` (`item`, `cost`) VALUES ('$item', '$cost')";
-//   if(mysqli_query($conn,$ins)){
-//     // echo "inserted";
-//     $insert = true;
-//   }
-//   else{
-//     echo "error";
-//   }
-// }
+        <?php 
 
 
 
