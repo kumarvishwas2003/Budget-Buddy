@@ -177,8 +177,8 @@ if($result -> num_rows > 0){
       <td scope='col'>" . $row['item'] . "</td>
       <td scope='col'>" . $row['cost'] . "</td>
       <td scope='col'>
-      <a href='update.html' class='update'>Update</a>
-      <button type='submit' name='delete' class='delete'>Delete</button>
+      <a href='update.php?id=$row[sno]&item=$row[item]&cost=$row[cost]' class='update'>Update</a>
+      <a href='delete.php?id=$row[sno]&item=$row[item]&cost=$row[cost]' class='delete'>Delete</a>
       </td>
     </tr>
     
