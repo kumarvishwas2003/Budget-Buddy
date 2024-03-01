@@ -15,6 +15,7 @@ include 'connection.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <style>
     /* * {
         overflow: hidden;
@@ -99,6 +100,14 @@ include 'connection.php';
                 <button class="back-btn border-2 p-2 rounded-2xl text-xl font-semibold mt-2 bg-orange-400 text-white">
                     Back
                 </button></a>
+
+
+                <div class="middle flex flex-col">
+      <span class="expense-head-div self-center text-xl font-bold mt-4">
+        Dashboard
+      </span>
+      
+      </div> 
 
             <a href="logout.php">
                 <input type="submit" value="Logout"

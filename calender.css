@@ -20,13 +20,14 @@
 }
 .expense {
   /* height: 10%; */
-  background-color: rgba(220, 117, 117, 0.336);
+/*  background-color: rgba(220, 117, 117, 0.336);*/
   border: 1px solid white;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
 }
 .income {
   /* height: 10%; */
   background-color: rgba(128, 232, 118, 0.336);
   border: 1px solid white;
-  border-bottom-right-radius: 18px;
-  border-bottom-left-radius: 18px;
+  
 }
