@@ -12,6 +12,7 @@ include 'getmonth.php';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./CSS/float.css" />
     <link rel="stylesheet" href="calender.css" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <style>
     /* Style month sections */
     .month {

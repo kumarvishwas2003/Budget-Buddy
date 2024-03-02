@@ -62,6 +62,7 @@ if ($result) {
     <title>Expense</title>
     <link rel="stylesheet" href="./CSS/float.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <style>
     .form-label {
         font-size: 18px;

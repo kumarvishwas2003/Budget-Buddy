@@ -91,6 +91,52 @@ if(isset($_POST['register'])){
 window.onload = function() {
   alert("⚠️ Warning: This website is not very secure. Please do not share your sensitive information such as email addresses and passwords. Use non-official details instead.");
 };
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector("form").addEventListener("submit", function (event) {
+            var fname = document.getElementById("fname").value.trim();
+            var lname = document.getElementById("lname").value.trim();
+            var username = document.getElementById("username").value.trim();
+            // var password = document.getElementById("password").value.trim();
+            var gender = document.querySelector('input[name="sex"]:checked');
+
+            // Regular expressions for validation
+            var nameRegex = /^[a-zA-Z]+$/;
+            var usernameRegex = /^[a-zA-Z0-9_]+$/;
+            // var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+
+            if (!nameRegex.test(fname)) {
+                alert("Please enter a valid first name.");
+                event.preventDefault();
+                return;
+            }
+
+            if (!nameRegex.test(lname)) {
+                alert("Please enter a valid last name.");
+                event.preventDefault();
+                return;
+            }
+
+            if (!usernameRegex.test(username)) {
+                alert("Please enter a valid username. Only alphanumeric characters and underscore allowed.");
+                event.preventDefault();
+                return;
+            }
+
+            // if (!passwordRegex.test(password)) {
+            //     alert("Password must be at least 8 characters long and contain at least one digit, one lowercase and one uppercase letter.");
+            //     event.preventDefault();
+            //     return;
+            // }
+
+            if (!gender) {
+                alert("Please select your gender.");
+                event.preventDefault();
+                return;
+            }
+
+            // If all validations pass, the form will be submitted
+        });
+    });
 </script>
 </body>
 

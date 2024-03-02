@@ -17,6 +17,7 @@ $user_profile = $_SESSION['username'];
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="calender.css">
     <link rel="stylesheet" href="./CSS/float.css" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
   </head>
   <body>
     <div class="calender-container">
