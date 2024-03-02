@@ -3,10 +3,31 @@ include'connection.php';
 include 'getmonth.php';
 $user_entry = $_SESSION['username'];
 $month = $_POST['month'];
+$_SESSION['month'] = $month;
 // echo $month;
 $sql = "SELECT * FROM expense WHERE DATE_FORMAT(date, '%m') = '$month' AND user = '$user_entry'";
 
 $result = $conn -> query($sql);
+
+$sql_sum = "SELECT SUM(cost) AS total_sum FROM expense WHERE DATE_FORMAT(date, '%m') = '$month' && user='$user_entry'";
+// Execute the query
+$result_sum = mysqli_query($conn, $sql_sum);
+
+// Check if the query executed successfully
+if ($result_sum) {
+    // Fetch the result
+    $row = mysqli_fetch_assoc($result_sum);
+    
+    // Total sum of the column
+    $total_sum = $row['total_sum'];
+    
+    // Output the total sum
+    // echo "Total Sum: " . $total_sum;
+} else {
+    // If the query fails, handle the error
+    echo "Error: " . mysqli_error($conn);
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +47,9 @@ $result = $conn -> query($sql);
             display: flex;
             justify-content: center;
         }
+        table tr td, table tr th{
+    background-color: rgba(220, 255, 220, 0.5) !important;
+}
     </style>
 </head>
 <body>
@@ -42,16 +66,14 @@ $result = $conn -> query($sql);
             Back
           </button></a
         >
-        <!-- <span class="self-center text-sm font-bold">
-        <?php echo $jan ?>
-      </span> -->
+       
 
         <div class="middle flex flex-col">
       <span class="expense-head-div self-center text-xl font-bold mt-3">
         Summary
       </span>
-      <span>
-        
+      <span class="font-bold">
+        Total Sum: <?php echo $total_sum?>
       </span> 
       </div> 
 
@@ -64,7 +86,7 @@ $result = $conn -> query($sql);
       </div>
 
       <div class="download text-xl font-bold flex ">
-        <a href="generate_pdf.php" class="download-head mb-3">Click to download <i class="fa-solid fa-file-pdf"></i></a>
+        <a href="pdf\generate_pdf.php" class="download-head mb-3">Click to download <i class="fa-solid fa-file-pdf"></i></a>
     </div>
         <!--table-->
     <div class="table-container">
@@ -72,7 +94,7 @@ $result = $conn -> query($sql);
             <table class="table table-bordered tb">
             <thead>
                 <tr>
-                    <th scope="col">S no.</th>
+                    <th scope="col">Sno.</th>
                     <th scope="col">Item</th>
                     <th scope="col">Cost</th>
                     <th scope="col">Date</th>
