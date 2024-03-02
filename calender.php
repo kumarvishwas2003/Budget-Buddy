@@ -1,7 +1,12 @@
 <?php
 include 'connection.php';
 include 'getmonth.php';
-
+$user_profile = $_SESSION['username'];
+    // $user_register = $_SESSION['fname'];
+    if ($user_profile) {
+    } else {
+        header('location:login.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,32 +113,3 @@ include 'getmonth.php';
     <!--calender-container-->
   </body>
 </html>
-<!-- function getTotalExpenseForMonth($conn, $user_calender, $month) {
-    // Construct the SQL query to fetch the total sum of expenses for the specified month
-    $sql = "SELECT SUM(cost) AS total_sum 
-            FROM expense 
-            WHERE MONTH(date) = $month AND user = '$user_calender'";
-    
-    // Execute the query
-    $result = mysqli_query($conn, $sql);
-    
-    if ($result) {
-        // Fetch the result
-        $row = mysqli_fetch_assoc($result);
-        
-        // Total sum of the column
-        $total_sum = $row['total_sum'];
-        
-        // Return the total sum
-        return $total_sum;
-    } else {
-        // If the query fails, handle the error
-        echo "Error: " . mysqli_error($conn);
-        return false;
-    }
-} -->
-
-<!-- $january_total = getTotalExpenseForMonth($conn, $user_calender, 1); // January
-$february_total = getTotalExpenseForMonth($conn, $user_calender, 2);// February
-$march_total = getTotalExpenseForMonth($conn, $user_calender, 3); //march
-$april_total = getTotalExpenseForMonth($conn, $user_calender, 4); //april -->

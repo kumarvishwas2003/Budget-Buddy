@@ -5,7 +5,12 @@ $user_entry = $_SESSION['username'];
 $date_current = $_SESSION['date_main'];
 // echo $date_current;
 
-
+$user_profile = $_SESSION['username'];
+    // $user_register = $_SESSION['fname'];
+    if ($user_profile) {
+    } else {
+        header('location:login.php');
+    }
 
 
 $date_formatted = date("Y-m-d", strtotime($date_current));

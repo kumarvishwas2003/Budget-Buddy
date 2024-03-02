@@ -87,6 +87,11 @@ if(isset($_POST['register'])){
         </form>
     </div>
     <!--main container-->
+    <script>
+window.onload = function() {
+  alert("⚠️ Warning: This website is not very secure. Please do not share your sensitive information such as email addresses and passwords. Use non-official details instead.");
+};
+</script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ include 'connection.php';
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" /> 
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="./CSS/dashboard.css" />
@@ -15,7 +15,7 @@ include 'connection.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <style>
     /* * {
         overflow: hidden;
@@ -72,11 +72,6 @@ include 'connection.php';
             transform: translate(-50%, -50%);
         }
     }
-    /*this is the proof that merge is working
-
-    /* .log-out-btn {
-        background-color: #138808;
-      } */
     </style>
 </head>
 
@@ -102,12 +97,12 @@ include 'connection.php';
                 </button></a>
 
 
-                <div class="middle flex flex-col">
-      <span class="expense-head-div self-center text-xl font-bold mt-4">
-        Dashboard
-      </span>
-      
-      </div> 
+            <div class="middle flex flex-col">
+                <span class="expense-head-div self-center text-xl font-bold mt-4">
+                    Dashboard
+                </span>
+
+            </div>
 
             <a href="logout.php">
                 <input type="submit" value="Logout"
@@ -141,7 +136,7 @@ include 'connection.php';
                     </div>
                 </div>
                 <!--income-->
-                
+
                 <!--expense-->
                 <div class="accordian">
                     <!--accordian-->
@@ -205,7 +200,9 @@ include 'connection.php';
                     </div>
                     <!--question-->
                     <div class="answer">
-                        Welcome to Budget Buddy! We're here to help you manage your finances effectively. Our platform offers tools for tracking expenses, analyzing spending habits, and making informed financial decisions. Join us and take control of your finances today!
+                        Welcome to Budget Buddy! We're here to help you manage your finances effectively. Our platform
+                        offers tools for tracking expenses, analyzing spending habits, and making informed financial
+                        decisions. Join us and take control of your finances today!
                     </div>
                 </div>
             </div>
@@ -225,10 +222,6 @@ include 'connection.php';
                         <i class="fa-solid fa-chart-line"></i></button></a>
             </div>
         </div>
-        <!--contents-div-->
-        <!-- <input type="text" placeholder="helllo">
-        <input type="button" value="click">
-        <input type="submit" value="hello"> -->
     </div>
     <!--dashboard-->
     <script src="dashboard.js"></script>

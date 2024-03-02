@@ -1,7 +1,6 @@
 <?php
 include 'connection.php';
 session_start();
-// if()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +9,6 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Budget Buddy</title>
-    <!-- <link rel="stylesheet" href="./CSS/welcome.css"> -->
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,23 +97,8 @@ session_start();
     } else {
         header('location:login.php');
     }
-    // echo "hello " . $user_profile; //thsi has to be used in welcome message using isset
     ?>
-    <!-- <div class="welcome-container">
-        <div class="logo-div">
-            <img src="./images/logo.png" alt="logo" class="img">
-        </div>
-        <div class="welcome-head">
-            <p> Welcome to Budget Buddy!</p>
-        </div>
-        <div class="welcome-para">
-            Welcome to Budget Buddy! Your trusted partner in financial management. Track expenses, set goals, and gain
-            valuable insights. With our intuitive tools and personalized guidance, take control of your financial
-            journey and achieve your goals with confidence and ease. Let's start budgeting together!
-        </div>
-        <input type="button" value="Next">
-        
-    </div> -->
+   
     <div class="welcome-container">
         <div>
             <img src="./images/logo.png" class="bg-logo">

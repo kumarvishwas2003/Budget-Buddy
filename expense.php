@@ -1,7 +1,12 @@
 <?php
 include 'connection.php';
 session_start();
-
+$user_profile = $_SESSION['username'];
+    // $user_register = $_SESSION['fname'];
+    if ($user_profile) {
+    } else {
+        header('location:login.php');
+    }
 
 if(isset($_POST['date_ok'])) {
     $date_main = $_POST['date_main'];
